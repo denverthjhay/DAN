@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import './symptomschecker.dart';
+import './medicineidentifier.dart';
 
 class mainmenuWidget extends StatefulWidget {
   @override
@@ -58,7 +60,7 @@ class _mainmenuWidgetState extends State<mainmenuWidget> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => mainmenuWidget()),
+                                builder: (context) => symptomscheckerWidget()),
                           );
                         },
                         child: RichText(
@@ -148,7 +150,8 @@ class _mainmenuWidgetState extends State<mainmenuWidget> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => mainmenuWidget()),
+                                builder: (context) =>
+                                    medicineidentifierWidget()),
                           );
                         },
                         child: RichText(
@@ -407,7 +410,7 @@ class _mainmenuWidgetState extends State<mainmenuWidget> {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.search),
+              icon: Icon(FontAwesomeIcons.userDoctor),
               label: 'Doctors',
             ),
             BottomNavigationBarItem(
@@ -458,9 +461,14 @@ AppBar toBuildAppBar() {
     backgroundColor: Color.fromRGBO(6, 174, 213, 1),
     centerTitle: true,
     automaticallyImplyLeading: true,
-    title: const Text(
-      "Main Menu",
-    ),
+    title: const Text("Main Menu",
+        style: TextStyle(
+            color: Color.fromRGBO(255, 255, 255, 1),
+            fontFamily: 'DM Sans',
+            fontSize: 23,
+            letterSpacing: 0,
+            fontWeight: FontWeight.normal,
+            height: 1)),
   );
 }
 
