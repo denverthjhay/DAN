@@ -57,8 +57,7 @@ class _GetstartedscreenWidgetState extends State<GetstartedscreenWidget> {
                   color: Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'DM Sans',
                   fontSize: 23,
-                  letterSpacing:
-                      0 /*percentages not used in flutter. defaulting to zero*/,
+                  letterSpacing: 0,
                   fontWeight: FontWeight.normal,
                   height: 1),
             ),
