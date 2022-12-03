@@ -4,6 +4,7 @@ import './symptomschecker.dart';
 import './medicineidentifier.dart';
 import './medicinereminder.dart';
 import './forums.dart';
+import './healthlib.dart';
 
 class homeWidget extends StatefulWidget {
   @override
@@ -78,7 +79,13 @@ class _homeWidgetState extends State<homeWidget> {
                         color: Color.fromRGBO(6, 174, 213, 1),
                       ),
                       child: MaterialButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HealthLibrary()),
+                          );
+                        },
                         child: RichText(
                           text: TextSpan(
                             style: TextStyle(
