@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import './loginscreen.dart';
 
 class profileWidget extends StatefulWidget {
   @override
@@ -246,7 +247,7 @@ AppBar toBuildAppBar() {
           fontSize: 23,
           fontWeight: FontWeight.normal,
         )),
-    actions: <Widget>[
+    actions: [
       TextButton(
         onPressed: () {},
         child: const Text('Sign Out',
