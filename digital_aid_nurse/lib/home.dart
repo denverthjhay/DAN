@@ -1,3 +1,6 @@
+import 'dart:html';
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './symptomschecker.dart';
@@ -15,24 +18,23 @@ class _homeWidgetState extends State<homeWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: toBuildAppBar(),
       drawer: toBuildDrawer(),
+      appBar: toBuildAppBar(context),
       body: Padding(
         padding: const EdgeInsets.all(30),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              searchBox(),
               const SizedBox(
-                height: 25,
+                height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Flexible(
                     child: Container(
-                      height: 40,
-                      width: 150,
+                      height: 50,
+                      width: 170,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         color: Color.fromRGBO(6, 174, 213, 1),
@@ -49,7 +51,7 @@ class _homeWidgetState extends State<homeWidget> {
                           text: TextSpan(
                             style: TextStyle(
                               fontFamily: 'DM Sans',
-                              fontSize: 12,
+                              fontSize: 13,
                               color: Colors.white,
                               fontWeight: FontWeight.normal,
                             ),
@@ -59,7 +61,7 @@ class _homeWidgetState extends State<homeWidget> {
                                   child: Icon(
                                     FontAwesomeIcons.stethoscope,
                                     color: Color.fromRGBO(255, 217, 59, 1),
-                                    size: 12,
+                                    size: 14,
                                   )),
                               TextSpan(
                                 text: "  Check Symptoms",
@@ -72,8 +74,8 @@ class _homeWidgetState extends State<homeWidget> {
                   ),
                   Flexible(
                     child: Container(
-                      height: 40,
-                      width: 150,
+                      height: 50,
+                      width: 170,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         color: Color.fromRGBO(6, 174, 213, 1),
@@ -90,7 +92,7 @@ class _homeWidgetState extends State<homeWidget> {
                           text: TextSpan(
                             style: TextStyle(
                               fontFamily: 'DM Sans',
-                              fontSize: 12,
+                              fontSize: 13,
                               color: Colors.white,
                               fontWeight: FontWeight.normal,
                             ),
@@ -100,7 +102,7 @@ class _homeWidgetState extends State<homeWidget> {
                                   child: Icon(
                                     FontAwesomeIcons.bookOpen,
                                     color: Color.fromRGBO(255, 217, 59, 1),
-                                    size: 12,
+                                    size: 14,
                                   )),
                               TextSpan(
                                 text: "  Health Library",
@@ -114,15 +116,15 @@ class _homeWidgetState extends State<homeWidget> {
                 ],
               ),
               const SizedBox(
-                height: 25,
+                height: 15,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Flexible(
                     child: Container(
-                      height: 40,
-                      width: 150,
+                      height: 50,
+                      width: 170,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         color: Color.fromRGBO(6, 174, 213, 1),
@@ -140,7 +142,7 @@ class _homeWidgetState extends State<homeWidget> {
                           text: TextSpan(
                             style: TextStyle(
                               fontFamily: 'DM Sans',
-                              fontSize: 12,
+                              fontSize: 13,
                               color: Colors.white,
                               fontWeight: FontWeight.normal,
                             ),
@@ -150,7 +152,7 @@ class _homeWidgetState extends State<homeWidget> {
                                   child: Icon(
                                     FontAwesomeIcons.pills,
                                     color: Color.fromRGBO(255, 217, 59, 1),
-                                    size: 12,
+                                    size: 14,
                                   )),
                               TextSpan(
                                 text: "  Medicine Identifier",
@@ -163,8 +165,8 @@ class _homeWidgetState extends State<homeWidget> {
                   ),
                   Flexible(
                     child: Container(
-                      height: 40,
-                      width: 150,
+                      height: 50,
+                      width: 170,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         color: Color.fromRGBO(6, 174, 213, 1),
@@ -181,18 +183,16 @@ class _homeWidgetState extends State<homeWidget> {
                           text: TextSpan(
                             style: TextStyle(
                               fontFamily: 'DM Sans',
-                              fontSize: 12,
+                              fontSize: 13,
                               color: Colors.white,
                               fontWeight: FontWeight.normal,
                             ),
                             children: <InlineSpan>[
                               WidgetSpan(
                                   alignment: PlaceholderAlignment.middle,
-                                  child: Icon(
-                                    FontAwesomeIcons.filePrescription,
-                                    color: Color.fromRGBO(255, 217, 59, 1),
-                                    size: 12,
-                                  )),
+                                  child: Icon(FontAwesomeIcons.filePrescription,
+                                      color: Color.fromRGBO(255, 217, 59, 1),
+                                      size: 14)),
                               TextSpan(
                                 text: "  Medecine Reminder",
                               ),
@@ -207,6 +207,7 @@ class _homeWidgetState extends State<homeWidget> {
               const SizedBox(
                 height: 25,
               ),
+              //Health forums
               Container(
                 width: 400,
                 child: Text(
@@ -214,7 +215,7 @@ class _homeWidgetState extends State<homeWidget> {
                   style: TextStyle(
                     color: Color.fromRGBO(0, 0, 0, 1),
                     fontFamily: 'DM Sans',
-                    fontSize: 13,
+                    fontSize: 17,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -222,40 +223,46 @@ class _homeWidgetState extends State<homeWidget> {
               const SizedBox(
                 height: 25,
               ),
-              Column(children: [
-                Container(
-                  height: 150.0,
-                  width: 320.0,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/Rectangle114.png'),
-                      fit: BoxFit.cover,
-                    ),
-                    border: Border.all(color: Colors.grey, width: 1),
-                    borderRadius: BorderRadius.only(
-                        topRight: const Radius.circular(10.0),
-                        topLeft: const Radius.circular(10.0)),
-                  ),
-                ),
-                Container(
-                    height: 65.0,
-                    width: 320.0,
+              Column(
+                children: [
+                  Container(
+                    height: 255,
+                    width: 350.0,
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(215, 232, 236, 1),
-                      border: Border.all(color: Colors.grey, width: 1),
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: const Radius.circular(10.0),
-                          bottomRight: const Radius.circular(10.0)),
+                      color: Colors.white,
+                      border: Border.all(color: Colors.black, width: 0.3),
+                      borderRadius: BorderRadius.all(Radius.circular(7)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          blurRadius: 7,
+                          offset: Offset(1, 10),
+                        ),
+                      ],
                     ),
                     child: Column(children: [
-                      Align(
+                      Container(
+                          height: 170.0,
+                          width: 350.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(7.0),
+                                topLeft: Radius.circular(7.0)),
+                            image: DecorationImage(
+                              image:
+                                  AssetImage('assets/images/Rectangle114.png'),
+                              fit: BoxFit.cover,
+                            ),
+                          )),
+                      Container(
+                          height: 35,
                           alignment: Alignment.centerLeft,
                           child: TextButton(
                             style: TextButton.styleFrom(
                               textStyle: const TextStyle(
                                 color: Color.fromRGBO(6, 174, 213, 1),
                                 fontFamily: 'DM Sans',
-                                fontSize: 13,
+                                fontSize: 17,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -269,135 +276,160 @@ class _homeWidgetState extends State<homeWidget> {
                               );
                             },
                           )),
-                      Align(
-                        alignment: Alignment.centerLeft,
+                      Container(
+                        padding: EdgeInsets.only(left: 10),
                         child: Text(
                           'Two years into the COVID-19 pandemic, we’ve learned a lot about resilience: what makes us stronger, safer and more adaptable –– and what doesn’t. ',
                           style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'DM Sans',
-                            fontSize: 8,
-                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                            fontWeight: FontWeight.normal,
                           ),
                         ),
                       ),
-                    ]))
-              ]),
-              const SizedBox(
-                height: 25,
-              ),
-              Column(children: [
-                Container(
-                  height: 150.0,
-                  width: 320.0,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/Forum2.png'),
-                      fit: BoxFit.cover,
-                    ),
-                    border: Border.all(color: Colors.grey, width: 1),
-                    borderRadius: BorderRadius.only(
-                        topRight: const Radius.circular(10.0),
-                        topLeft: const Radius.circular(10.0)),
+                    ]),
                   ),
-                ),
-                Container(
-                    height: 65.0,
-                    width: 320.0,
+                  //Page 2
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  Container(
+                    height: 255,
+                    width: 350.0,
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(215, 232, 236, 1),
-                      border: Border.all(color: Colors.grey, width: 1),
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: const Radius.circular(10.0),
-                          bottomRight: const Radius.circular(10.0)),
+                      color: Colors.white,
+                      border: Border.all(color: Colors.black, width: 0.3),
+                      borderRadius: BorderRadius.all(Radius.circular(7)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          blurRadius: 7,
+                          offset: Offset(1, 10),
+                        ),
+                      ],
                     ),
                     child: Column(children: [
-                      Align(
+                      Container(
+                          height: 170.0,
+                          width: 350.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(7.0),
+                                topLeft: Radius.circular(7.0)),
+                            image: DecorationImage(
+                              image: AssetImage('assets/images/Forum2.png'),
+                              fit: BoxFit.cover,
+                            ),
+                          )),
+                      Container(
+                          height: 35,
                           alignment: Alignment.centerLeft,
                           child: TextButton(
                             style: TextButton.styleFrom(
                               textStyle: const TextStyle(
                                 color: Color.fromRGBO(6, 174, 213, 1),
                                 fontFamily: 'DM Sans',
-                                fontSize: 13,
+                                fontSize: 17,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             child:
                                 const Text('Looking after our mental health'),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => forumsWidget()),
+                              );
+                            },
                           )),
-                      Align(
-                        alignment: Alignment.centerLeft,
+                      Container(
+                        padding: EdgeInsets.only(left: 10),
                         child: Text(
                           'The new realities of working from home, temporary unemployment, home-schooling of children, and lack of physical contact with other family memb...',
                           style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'DM Sans',
-                            fontSize: 8,
-                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                            fontWeight: FontWeight.normal,
                           ),
                         ),
                       ),
-                    ]))
-              ]),
-              const SizedBox(
-                height: 25,
-              ),
-              Column(children: [
-                Container(
-                  height: 150.0,
-                  width: 320.0,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/Forum3.png'),
-                      fit: BoxFit.cover,
-                    ),
-                    border: Border.all(color: Colors.grey, width: 1),
-                    borderRadius: BorderRadius.only(
-                        topRight: const Radius.circular(10.0),
-                        topLeft: const Radius.circular(10.0)),
+                    ]),
                   ),
-                ),
-                Container(
-                    height: 65.0,
-                    width: 320.0,
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  //Page 3
+                  Container(
+                    height: 255,
+                    width: 350.0,
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(215, 232, 236, 1),
-                      border: Border.all(color: Colors.grey, width: 1),
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: const Radius.circular(10.0),
-                          bottomRight: const Radius.circular(10.0)),
+                      color: Colors.white,
+                      border: Border.all(color: Colors.black, width: 0.3),
+                      borderRadius: BorderRadius.all(Radius.circular(7)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          blurRadius: 7,
+                          offset: Offset(1, 10),
+                        ),
+                      ],
                     ),
                     child: Column(children: [
-                      Align(
+                      Container(
+                          height: 170.0,
+                          width: 350.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(7.0),
+                                topLeft: Radius.circular(7.0)),
+                            image: DecorationImage(
+                              image: AssetImage('assets/images/Forum3.png'),
+                              fit: BoxFit.cover,
+                            ),
+                          )),
+                      Container(
+                          height: 35,
                           alignment: Alignment.centerLeft,
                           child: TextButton(
                             style: TextButton.styleFrom(
                               textStyle: const TextStyle(
                                 color: Color.fromRGBO(6, 174, 213, 1),
                                 fontFamily: 'DM Sans',
-                                fontSize: 13,
+                                fontSize: 17,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             child: const Text('Finding your own Doctor?'),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => forumsWidget()),
+                              );
+                            },
                           )),
                       Container(
-                        alignment: Alignment.center,
+                        padding: EdgeInsets.only(left: 10),
                         child: Text(
                           'Choosing a new doctor can be a challenge, especially if you have moved to a new community. Asking for recommendations from co-workers, neighbors, and...',
                           style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'DM Sans',
-                            fontSize: 8,
-                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                            fontWeight: FontWeight.normal,
                           ),
                         ),
                       ),
-                    ]))
-              ]),
+                    ]),
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                ],
+              ),
             ],
           ),
         ),
@@ -406,12 +438,11 @@ class _homeWidgetState extends State<homeWidget> {
   }
 }
 
-Widget searchBox() {
+Widget searchBox(context) {
   return Container(
-    padding: EdgeInsets.symmetric(horizontal: 15),
     decoration: BoxDecoration(
       color: Color.fromARGB(235, 235, 235, 235),
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(10),
     ),
     child: TextField(
       // onChanged: (value) => searchYourToDo(value),
@@ -434,19 +465,12 @@ Widget searchBox() {
   );
 }
 
-AppBar toBuildAppBar() {
+AppBar toBuildAppBar(context) {
   return AppBar(
     backgroundColor: Color.fromRGBO(6, 174, 213, 1),
     centerTitle: true,
     automaticallyImplyLeading: true,
-    title: const Text("DAN",
-        style: TextStyle(
-            color: Color.fromRGBO(255, 255, 255, 1),
-            fontFamily: 'DM Sans',
-            fontSize: 23,
-            letterSpacing: 0,
-            fontWeight: FontWeight.normal,
-            height: 1)),
+    title: searchBox(context),
   );
 }
 

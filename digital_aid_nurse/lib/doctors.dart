@@ -34,7 +34,6 @@ class _doctorsWidgetState extends State<doctorsWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: const [
                         Text(
                           'Find a doctor or hospital in your area',

@@ -100,7 +100,7 @@ class _medicineidentifierWidgetState extends State<medicineidentifierWidget> {
                       children: [
                         Image.asset(
                           'assets/images/Ellipse101.png',
-                          width: 60,
+                          width: 80,
                           height: 70,
                         ),
                         const Text(
@@ -124,7 +124,7 @@ class _medicineidentifierWidgetState extends State<medicineidentifierWidget> {
                       children: [
                         Image.asset(
                           'assets/images/Ellipse102.png',
-                          width: 60,
+                          width: 80,
                           height: 70,
                         ),
                         const Text(
@@ -148,7 +148,7 @@ class _medicineidentifierWidgetState extends State<medicineidentifierWidget> {
                       children: [
                         Image.asset(
                           'assets/images/Ellipse103.png',
-                          width: 60,
+                          width: 80,
                           height: 70,
                         ),
                         const Text(
@@ -183,7 +183,7 @@ class _medicineidentifierWidgetState extends State<medicineidentifierWidget> {
                       children: [
                         Image.asset(
                           'assets/images/Ellipse104.png',
-                          width: 60,
+                          width: 80,
                           height: 70,
                         ),
                         const Text(
@@ -207,7 +207,7 @@ class _medicineidentifierWidgetState extends State<medicineidentifierWidget> {
                       children: [
                         Image.asset(
                           'assets/images/Ellipse105.png',
-                          width: 60,
+                          width: 80,
                           height: 70,
                         ),
                         const Text(
@@ -231,7 +231,7 @@ class _medicineidentifierWidgetState extends State<medicineidentifierWidget> {
                       children: [
                         Image.asset(
                           'assets/images/Ellipse106.png',
-                          width: 60,
+                          width: 80,
                           height: 70,
                         ),
                         const Text(
@@ -263,7 +263,7 @@ class _medicineidentifierWidgetState extends State<medicineidentifierWidget> {
                       children: [
                         Image.asset(
                           'assets/images/Ellipse107.png',
-                          width: 60,
+                          width: 80,
                           height: 70,
                         ),
                         const Text(
@@ -287,7 +287,7 @@ class _medicineidentifierWidgetState extends State<medicineidentifierWidget> {
                       children: [
                         Image.asset(
                           'assets/images/Ellipse108.png',
-                          width: 60,
+                          width: 80,
                           height: 70,
                         ),
                         const Text(
@@ -311,7 +311,7 @@ class _medicineidentifierWidgetState extends State<medicineidentifierWidget> {
                       children: [
                         Image.asset(
                           'assets/images/Ellipse109.png',
-                          width: 60,
+                          width: 80,
                           height: 70,
                         ),
                         const Text(
