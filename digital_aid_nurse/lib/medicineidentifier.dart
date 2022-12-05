@@ -89,243 +89,246 @@ class _medicineidentifierWidgetState extends State<medicineidentifierWidget> {
               const SizedBox(
                 height: 25,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              Column(
                 children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(primary: Colors.white),
-                    onPressed: () {},
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/Ellipse101.png',
-                          width: 80,
-                          height: 70,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(primary: Colors.white),
+                        onPressed: () {},
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/Ellipse101.png',
+                              width: 80,
+                              height: 70,
+                            ),
+                            const Text(
+                              'Round',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'DM Sans',
+                                  fontSize: 16,
+                                  letterSpacing: 0,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1),
+                            ),
+                          ],
                         ),
-                        const Text(
-                          'Round',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'DM Sans',
-                              fontSize: 16,
-                              letterSpacing: 0,
-                              fontWeight: FontWeight.bold,
-                              height: 1),
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(primary: Colors.white),
+                        onPressed: () {},
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/Ellipse102.png',
+                              width: 80,
+                              height: 70,
+                            ),
+                            const Text(
+                              'Oblong',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'DM Sans',
+                                  fontSize: 16,
+                                  letterSpacing: 0,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(primary: Colors.white),
+                        onPressed: () {},
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/Ellipse103.png',
+                              width: 80,
+                              height: 70,
+                            ),
+                            const Text(
+                              '3 Sided',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'DM Sans',
+                                  fontSize: 16,
+                                  letterSpacing: 0,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(primary: Colors.white),
-                    onPressed: () {},
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/Ellipse102.png',
-                          width: 80,
-                          height: 70,
-                        ),
-                        const Text(
-                          'Oblong',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'DM Sans',
-                              fontSize: 16,
-                              letterSpacing: 0,
-                              fontWeight: FontWeight.bold,
-                              height: 1),
-                        ),
-                      ],
-                    ),
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(primary: Colors.white),
-                    onPressed: () {},
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/Ellipse103.png',
-                          width: 80,
-                          height: 70,
-                        ),
-                        const Text(
-                          '3 Sided',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'DM Sans',
-                              fontSize: 16,
-                              letterSpacing: 0,
-                              fontWeight: FontWeight.bold,
-                              height: 1),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
                   const SizedBox(
-                    width: 4,
+                    height: 25,
                   ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(primary: Colors.white),
-                    onPressed: () {},
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/Ellipse104.png',
-                          width: 80,
-                          height: 70,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const SizedBox(
+                        width: 4,
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(primary: Colors.white),
+                        onPressed: () {},
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/Ellipse104.png',
+                              width: 80,
+                              height: 70,
+                            ),
+                            const Text(
+                              'Square',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'DM Sans',
+                                  fontSize: 16,
+                                  letterSpacing: 0,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1),
+                            ),
+                          ],
                         ),
-                        const Text(
-                          'Square',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'DM Sans',
-                              fontSize: 16,
-                              letterSpacing: 0,
-                              fontWeight: FontWeight.bold,
-                              height: 1),
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(primary: Colors.white),
+                        onPressed: () {},
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/Ellipse105.png',
+                              width: 80,
+                              height: 70,
+                            ),
+                            const Text(
+                              'Rectangle',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'DM Sans',
+                                  fontSize: 16,
+                                  letterSpacing: 0,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(primary: Colors.white),
+                        onPressed: () {},
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/Ellipse106.png',
+                              width: 80,
+                              height: 70,
+                            ),
+                            const Text(
+                              'Diamond',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'DM Sans',
+                                  fontSize: 16,
+                                  letterSpacing: 0,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(primary: Colors.white),
-                    onPressed: () {},
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/Ellipse105.png',
-                          width: 80,
-                          height: 70,
-                        ),
-                        const Text(
-                          'Rectangle',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'DM Sans',
-                              fontSize: 16,
-                              letterSpacing: 0,
-                              fontWeight: FontWeight.bold,
-                              height: 1),
-                        ),
-                      ],
-                    ),
+                  const SizedBox(
+                    height: 25,
                   ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(primary: Colors.white),
-                    onPressed: () {},
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/Ellipse106.png',
-                          width: 80,
-                          height: 70,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(primary: Colors.white),
+                        onPressed: () {},
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/Ellipse107.png',
+                              width: 80,
+                              height: 70,
+                            ),
+                            const Text(
+                              '5 Sided',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'DM Sans',
+                                  fontSize: 16,
+                                  letterSpacing: 0,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1),
+                            ),
+                          ],
                         ),
-                        const Text(
-                          'Diamond',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'DM Sans',
-                              fontSize: 16,
-                              letterSpacing: 0,
-                              fontWeight: FontWeight.bold,
-                              height: 1),
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(primary: Colors.white),
+                        onPressed: () {},
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/Ellipse108.png',
+                              width: 80,
+                              height: 70,
+                            ),
+                            const Text(
+                              '6 Sided',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'DM Sans',
+                                  fontSize: 16,
+                                  letterSpacing: 0,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(primary: Colors.white),
-                    onPressed: () {},
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/Ellipse107.png',
-                          width: 80,
-                          height: 70,
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(primary: Colors.white),
+                        onPressed: () {},
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/Ellipse109.png',
+                              width: 80,
+                              height: 70,
+                            ),
+                            const Text(
+                              'Other',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'DM Sans',
+                                  fontSize: 16,
+                                  letterSpacing: 0,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1),
+                            ),
+                          ],
                         ),
-                        const Text(
-                          '5 Sided',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'DM Sans',
-                              fontSize: 16,
-                              letterSpacing: 0,
-                              fontWeight: FontWeight.bold,
-                              height: 1),
-                        ),
-                      ],
-                    ),
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(primary: Colors.white),
-                    onPressed: () {},
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/Ellipse108.png',
-                          width: 80,
-                          height: 70,
-                        ),
-                        const Text(
-                          '6 Sided',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'DM Sans',
-                              fontSize: 16,
-                              letterSpacing: 0,
-                              fontWeight: FontWeight.bold,
-                              height: 1),
-                        ),
-                      ],
-                    ),
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(primary: Colors.white),
-                    onPressed: () {},
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/Ellipse109.png',
-                          width: 80,
-                          height: 70,
-                        ),
-                        const Text(
-                          'Other',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'DM Sans',
-                              fontSize: 16,
-                              letterSpacing: 0,
-                              fontWeight: FontWeight.bold,
-                              height: 1),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),

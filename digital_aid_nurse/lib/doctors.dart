@@ -17,78 +17,76 @@ class _doctorsWidgetState extends State<doctorsWidget> {
                 "assets/images/bgmaps.png",
               ),
               fit: BoxFit.fill,
-              opacity: 0.3),
+              opacity: 0.1),
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 70,
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 70,
+            ),
+            Container(
+              height: 50,
+              decoration: const BoxDecoration(
+                color: Color.fromRGBO(6, 174, 213, 1),
               ),
-              Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    children: const [
+                      Text(
+                        'Find a doctor or hospital in your area',
+                        style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 120,
+            ),
+            searchBox(),
+            const SizedBox(
+              height: 50,
+            ),
+            address(),
+            const SizedBox(
+              height: 50,
+            ),
+            Container(
+                width: 300,
                 height: 50,
                 decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                  ),
                   color: Color.fromRGBO(6, 174, 213, 1),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Row(
-                      children: const [
-                        Text(
-                          'Find a doctor or hospital in your area',
-                          style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 120,
-              ),
-              searchBox(),
-              const SizedBox(
-                height: 50,
-              ),
-              address(),
-              const SizedBox(
-                height: 50,
-              ),
-              Container(
-                  width: 300,
-                  height: 60,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20),
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20),
+                child: TextButton(
+                  child: const Text(
+                    'search for facilities',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'DM Sans',
+                      fontSize: 23,
+                      letterSpacing: 0,
+                      fontWeight: FontWeight.normal,
                     ),
-                    color: Color.fromRGBO(6, 174, 213, 1),
                   ),
-                  child: TextButton(
-                    child: const Text(
-                      'search for facilities',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'DM Sans',
-                        fontSize: 23,
-                        letterSpacing: 0,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
-                    onPressed: () => {},
-                  )),
-              const SizedBox(
-                height: 280,
-              ),
-            ],
-          ),
+                  onPressed: () => {},
+                )),
+            const SizedBox(
+              height: 100,
+            ),
+          ],
         ),
       ),
     );

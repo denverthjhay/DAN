@@ -11,7 +11,7 @@ class _profileWidgetState extends State<profileWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: toBuildAppBar(),
+      appBar: toBuildAppBar(context),
       body: ListView(
         children: <Widget>[
           const SizedBox(
@@ -236,7 +236,7 @@ class _profileWidgetState extends State<profileWidget> {
   }
 }
 
-AppBar toBuildAppBar() {
+AppBar toBuildAppBar(context) {
   return AppBar(
     backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
     automaticallyImplyLeading: false,
@@ -249,7 +249,12 @@ AppBar toBuildAppBar() {
         )),
     actions: [
       TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => loginscreenWidget()),
+          );
+        },
         child: const Text('Sign Out',
             style: TextStyle(
               color: Color.fromRGBO(6, 174, 213, 1),
